@@ -8,7 +8,7 @@ function App() {
 
             {/* Once Comment above one and try the below one i.e., without setting any props then as written in Navbar1 component, default props will be set */}
 
-            {/* <Navbar1/> */}
+            {/* <Navbar1 /> */}
         </>
     );
 }

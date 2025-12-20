@@ -4,4 +4,4 @@ console.log(dza)
 console.log(b)
 console.log(d)
 
-// For running in console, type node ./src/Lessons/Project-1/video_6/module1.mjs
+// For running in console, type node ./src/myProject/myProgress_6/module1.mjs 

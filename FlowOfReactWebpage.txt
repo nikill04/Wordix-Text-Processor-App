@@ -1,0 +1,145 @@
+REACT FINAL FLOW :
+1. Browser loads index.html
+
+2. React runs index.js
+
+3. index.js calls App()
+
+4. App() returns JSX
+
+5. JSX → converted to HTML
+
+6. HTML → placed inside div#root
+
+
+
+JSX RULES :
+<>
+  ...
+</>
+What is this? => This is called a Fragment.
+
+Why needed?
+React rule: A component must return only ONE parent element
+
+❌ This is NOT allowed:
+jsx 
+<div></div>
+<div></div>
+
+✅ So we wrap everything in:
+jsx
+<>
+  all elements
+</>
+📌 Fragment is invisible. It does NOT create a div in HTML. 
+1. Only ONE parent element
+
+2. Use className, not class
+
+3. Every tag must be closed
+
+4. JavaScript inside { }
+
+5. Component name must start with capital letter
+
+
+
+An **event** is:
+> **Any action done by the user in the browser**
+Examples:
+* Typing in a textarea
+* Clicking a button
+* Moving the mouse
+* Pressing a key
+
+When an event happens, the browser **creates an object** that describes **what happened**.
+That object is called an **event object**.
+
+## 2️⃣ What does React do with events?
+
+React:
+1. Listens for browser events
+2. Wraps them inside a **SyntheticEvent**
+3. Sends that event object to your function automatically
+
+You do **NOT create the event**
+You only **receive it**
+
+## 3️⃣ How does the event reach your function?
+When you write:
+<textarea onChange={handleChange} />
+
+You are saying:
+> “React, when something changes in this textarea, call `handleChange` and give it the event.”
+
+So React internally does:
+const handleOnChange = (event) => {
+  ...
+}
+
+You could name it anything:
+(e) => {}
+(evt) => {}
+
+## 4️⃣ What is inside the **event object**?
+
+The event object contains **details about the action**.
+
+Important parts:
+
+| Property          | Meaning                           |
+| ----------------- | --------------------------------- |
+| `event.type`      | Type of event (`change`, `click`) |
+| `event.target`    | Element that caused the event     |
+| `event.timeStamp` | When it happened                  |
+
+## 5️⃣ What is `event.target`?
+> **`event.target` is the HTML element that triggered the event**
+
+If user types in a textarea:
+<textarea>hello</textarea>
+
+Then:
+event.target === textarea element
+
+## 6️⃣ What is `event.target.value`?
+Form elements like:
+* `input`
+* `textarea`
+* `select`
+
+store user input in `.value`
+
+So: event.target.value   means:
+
+> “Give me the current text inside this textarea”
+Example:
+* User types: `hello`
+* `event.target.value` → `"hello"`
+
+## 8️⃣ How data flows when user types (GENERAL FLOW)
+User types
+   ↓
+Browser fires "change" event
+   ↓
+Event object is created
+   ↓
+React passes event to handler
+   ↓
+You read event.target.value
+   ↓
+You decide what to do with it
+
+Same logic applies to:
+* `<input>`
+* `<select>`
+* `<checkbox>`
+* `<radio>`
+
+Only difference:
+* property might be `.checked` instead of `.value`
+
+
+
+${ }  → inject JS into string. ${} is used only inside backticks to inject variables into strings

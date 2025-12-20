@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
 export default function Navbar2(props) {
     // Props are nothing but properties. You created some component, and you want to pass some things into that component. You say this is a component
     return (

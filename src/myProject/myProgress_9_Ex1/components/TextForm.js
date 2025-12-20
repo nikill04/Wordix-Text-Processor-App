@@ -28,6 +28,8 @@ export default function TextForm(props) {
         // navigator.clipboard: This is part of the Clipboard API, which provides functionality to read and write directly to the system clipboard in a secure way.
         // writeText(): This method takes a string as an argument and writes it to the clipboard.
         // testing.value: It represents the actual text content of the input or textarea element (identified here by text).
+
+        // we can simply write => navigator.clipboard.writeText(text) , instead of all the above
     }
 
     const handleExtraSpaces = () => {

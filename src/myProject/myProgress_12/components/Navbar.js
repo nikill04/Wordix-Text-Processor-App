@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Navbar({ mode, toggleMode, title = 'Set title here', aboutText = 'About text here' }) {
     return (
         <div>
-            <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
+            <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>  {/*  ${ }  → inject JS into string. ${} is used only inside backticks to inject variables into strings  */}
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">{title}</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

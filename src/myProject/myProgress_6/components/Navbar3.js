@@ -35,6 +35,6 @@ export default function Navbar3(props) {
 
 // This is for when you want specific input types for props, when you send other types that will show an error
 Navbar3.propTypes={
-    title: PropTypes.string.isRequired, // ==> if we set something to 'isRequired' then it is mandatory to sent or set the value of that prop. Otherwise it will throw an error
+    title: PropTypes.string.isRequired, // ==> if we set something to 'isRequired' then we have to pass that prop otherwise it will show an warning
     aboutText: PropTypes.string
 }

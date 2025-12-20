@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../../App.css';
 import Navbar from './components/Navbar';
 import TextForm1 from './components/TextForm1';
 
