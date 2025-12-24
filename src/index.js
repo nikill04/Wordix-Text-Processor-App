@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 // Set the current lesson you want to load
-const myProgressNumber = 13; // CHANGE THIS NUMBER TO LOAD A DIFFERENT FILE
+const myProgressNumber = 21; // CHANGE THIS NUMBER TO LOAD A DIFFERENT FILE
 const CurrentLesson = require(`./myProject/myProgress_${myProgressNumber}/App`).default;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

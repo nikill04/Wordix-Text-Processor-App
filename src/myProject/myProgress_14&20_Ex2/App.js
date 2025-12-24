@@ -24,7 +24,7 @@ function App() {
     const toggleMode = (cls) => {
         removeBodyClasses()
         document.body.classList.add('bg-' + cls)
-        // '.classList' says what are all the classes that are present to the element(Here it is 'body'). Here we are adding the "bg-'cls'", that means for example after adding .bg-danger to the classList of 'body' i.e., now body has .bg-danger class. and .bg-danger class means background color being red. So, 'body''s background color will be changed to red. 
+        // '.classList' says what are all the classes that are present to the element(Here it is 'body'). Here we are adding the "bg-'cls'", that means for example after adding .bg-danger to the classList of 'body' i.e., now body has .bg-danger class and .bg-danger class means background color being red. So, 'body''s background color will be changed to red. 
         // But after adding .bg-danger here after even if we add other bg-classes, they won't work as first bg-danger has been added it will be dominating. So, before adding each bg-class we have to remove all the existing background color classes. So, that's why we use removeBodyClasses function here.
     };
 
@@ -49,7 +49,7 @@ function App() {
                 <Alert alert={alert} />
                 <div className="container my-3">
                     <Routes>
-                        <Route path="/about" element={<About mode={mode}/>} />
+                        <Route path="/about" element={<About mode={mode} />} />
                         <Route path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode} />} />
                         {/* <Route path="*" element={<NoMatch/> } /> */}
                     </Routes>

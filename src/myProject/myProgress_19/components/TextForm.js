@@ -31,7 +31,7 @@ export default function TextForm(props) {
         text.select();  //  ==> This is not necessary.It is typically used to visually highlight the text in the input or textarea field.
 
         navigator.clipboard.writeText(text.value)
-        document.getSelection().removeAllRanges()
+        document.getSelection().removeAllRanges() // This line is used to deselect the text after copying it to the clipboard.
         props.showAlert("copied to clipboard!", "success")
     }
 

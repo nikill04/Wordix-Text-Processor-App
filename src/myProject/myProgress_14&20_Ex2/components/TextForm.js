@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 export default function TextForm(props) {
 
 
-
     const [text, setText] = useState('');
 
     const handleUpClick = () => {
@@ -69,7 +68,7 @@ export default function TextForm(props) {
                 {/* <p>{text.split(" ").length} words, {text.length} characters</p> */}
                 {/* For understanding the below one correctly first refer "TextForm 1.png"
                     a1 = " nik hil"
-                   Here, a1 has a leading space before "nik." When you run a1.split(" "), the split operation treats the leading space as a separator, creating an empty string(i.e., ==> "") as the first element in the resulting array. So the result is ["", "nik", "hil"].
+                   Here, a1 has a leading space before "nik" When you run a1.split(" "), the split operation treats the leading space as a separator, creating an empty string(i.e., ==> "") as the first element in the resulting array. So the result is ["", "nik", "hil"].
                     a2 = " nik hil "
                    This string has both leading and trailing spaces. When you run a2.split(" "), it results in ["", "nik", "hil", ""] because both the leading and trailing spaces are treated as separators, adding an empty string at both the start and end of the array. 
                    
